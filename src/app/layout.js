@@ -15,16 +15,20 @@ const inter = Inter({
   variable: "--font-body",
 });
 
+export const metadata = {
+  title: "Dreem Walker",
+  description: "E-commerce website for Dreem Walker",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
-      <body className={`${fraunces.variable} ${inter.variable} font-sans`}>
+      <body className={`${fraunces.variable} ${inter.variable} font-sans antialiased`}>
         <ThemeProvider>
-         
           <CartProvider>
-             <Navbar />
+            <Navbar />
             {children}
-            </CartProvider>{" "}
+          </CartProvider>
         </ThemeProvider>
       </body>
     </html>
